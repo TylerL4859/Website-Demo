@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#417630">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <title>Carter Dermatology | Skin Health & Aesthetics</title>
+
+</head>
+<body>
+  <header class="cd-header">
+    <div class="container header-row">
+      <a href="index.html" class="brand" aria-label="Carter Dermatology home">
+        <img class="logo" src="assets/logore.png" alt="Carter Dermatology logo" />
+        <span class="brand-text">
+          <span class="brand-line-1">Carter</span>
+          <span class="brand-line-2">Dermatology</span>
+        </span>
+      </a>
+      <nav class="cd-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+          <span class="sr-only">Toggle menu</span>
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <ul id="nav-menu" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="conditions.html">Conditions</a></li>
+          <li><a href="dr-carter.html">Dr. Carter</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn btn-primary" href="contact.html">Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-copy" style="text-align:center;max-width:600px;margin:0 auto 2.5rem auto;">
+          <h1 class="display">Healthy skin, confident you.</h1>
+          <p>Comprehensive dermatology for every stage of life—from acne and eczema to skin cancer checks and cosmetic care.</p>
+          <div class="cta-row" style="justify-content:center;">
+            <a class="btn btn-ghost" href="dr-carter.html">Meet Dr. Carter</a>
+          </div>
+          <ul class="trust-list" style="justify-content:center;">
+            <li>Board-trained clinician</li>
+            <li>Medical • Surgical</li>
+          </ul>
+        </div>
+        <div style="display:flex;justify-content:center;">
+          <div class="carousel">
+            <img class="carousel-slide" src="assets/CarterOffice.PNG.jpg" alt="Carter Dermatology office" />
+            <img class="carousel-slide" src="assets/logore.png" alt="Carter Dermatology desk" />
+            <img class="carousel-slide" src="assets/DERMA+P.jpg" alt="Dermatology room" />
+            <img class="carousel-slide" src="assets/DERMROOM.jpg" alt="After treatment" />
+          </div>
+        </div>
+        <style>
+        .carousel {
+          position: relative;
+          width: 100%;
+          max-width: 1100px;
+          height: 620px;
+          aspect-ratio: 16/9;
+          background: #e7ebe7;
+          border-radius: 32px;
+          box-shadow: 0 12px 48px rgba(0,0,0,0.14);
+          margin: 0 auto;
+          overflow: hidden;
+        }
+        .carousel-slide {
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          opacity: 0;
+          transition: opacity 1.2s ease;
+          z-index: 0;
+          background: #e7ebe7;
+        }
+        .carousel-slide.active {
+          opacity: 1;
+          z-index: 1;
+        }
+        </style>
+        <script>
+        // Fade-in/out carousel
+        (function() {
+          const slides = document.querySelectorAll('.carousel-slide');
+          let current = 0;
+          slides.forEach((slide, i) => slide.classList.toggle('active', i === 0));
+          setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+          }, 3500);
+        })();
+        </script>
+      </div>
+    </section>
+
+    <!-- Services preview -->
+    <section class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="display">Care we provide</h2>
+          <p>Evidence-based treatments tailored to you.</p>
+        </header>
+        <div class="cards-4">
+          <article class="card">
+            <img src="assets/PDT.png" alt="Photodynamic Therapy" />
+            <h3>Photodynamic Therapy</h3>
+            <p>Non-invasive treatment using a special light and photosensitizing agent to target abnormal skin cells, precancers, and severe acne.</p>
+            <a class="link" href="services.html#photodynamic">Learn more</a>
+          </article>
+          <article class="card">
+            <img src="assets/doc.jpg" alt="MOHS Micrographic Surgery" />
+            <h3>MOHS Micrographic Surgery</h3>
+            <p>The most advanced technique for removing skin cancer, maximizing cure rates while preserving healthy tissue.</p>
+            <a class="link" href="services.html#mohs">Learn more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Doctor spotlight -->
+    <section class="section alt">
+      <div class="container split">
+        <div>
+          <h2 class="display">Meet Dr. Westley Carter, D.O.</h2>
+          <p>Dr. Carter provides patient-centered care across medical, surgical, and cosmetic dermatology. His philosophy is to educate first, treat second—so you feel confident in every decision.</p>
+          <ul class="checklist">
+            <li>Board-trained dermatologist</li>
+            <li>Experienced in complex medical dermatology</li>
+            <li>Committed to clear communication</li>
+          </ul>
+          <a class="btn btn-ghost" href="dr-carter.html">Read full bio</a>
+        </div>
+        <div>
+          <img src="assets/DABOSS.jpg" alt="Portrait placeholder for Dr. Carter" class="dr-carter-img" />
+  <style>
+    .dr-carter-img {
+      border-radius: 50%;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      width: 340px;
+      height: 340px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      border: 3px solid #e7ebe7;
+      background: #fff;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <footer class="cd-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo">CD</div>
+        <p>Modern medical, surgical, and cosmetic dermatology with a patient-first approach.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="conditions.html">Conditions</a></li>
+          <li><a href="dr-carter.html">Dr. Carter</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><strong>Address:</strong> 702 NW Sheridan Rd, Lawton, OK 73505</li>
+          <li><strong>Phone:</strong> <a href="tel:+15805763376">(580) 576-DERM (3376)</a></li>
+          <li><strong>Fax:</strong> (580) 576-3375</li>
+          <li><strong>Email:</strong> <a href="mailto:CarterDermatology@gmail.com">CarterDermatology@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon–Thu: 8:30am – 5:00pm</li>
+          <li>Fri: 8:30am – 1:00pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© 2025 Carter Dermatology. All rights reserved.</small>
+      <div class="legal-links">
+        <a href="#">Privacy</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/app.js"></script>
+  <head>
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+</body>
+</html>
