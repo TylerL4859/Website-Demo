@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#417630">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css" />
+  <title>Carter Dermatology | Skin Health & Aesthetics</title>
+
+</head>
+<body>
+  <header class="cd-header">
+    <div class="container header-row">
+      <a href="index.html" class="brand" aria-label="Carter Dermatology home">
+        <img class="logo" src="assets/logore.png" alt="Carter Dermatology logo" />
+        <span class="brand-text">
+          <span class="brand-line-1">Carter</span>
+          <span class="brand-line-2">Dermatology</span>
+        </span>
+      </a>
+      <nav class="cd-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+          <span class="sr-only">Toggle menu</span>
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <ul id="nav-menu" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="conditions.html">Conditions</a></li>
+          <li><a href="dr-carter.html">Dr. Carter</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn btn-primary" href="#book">Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="content">
+        <section class="page-hero">
+          <div class="container">
+            <h1 class="display">Conditions we treat</h1>
+            <p>Comprehensive care for common and complex skin conditions.</p>
+          </div>
+        </section>
+        <div class="filter-bar top-centered">
+          <form id="cond-form" class="filter-row" autocomplete="off" onsubmit="event.preventDefault(); filterConditions();">
+            <input id="cond-search" type="search" placeholder="Search for a condition..." aria-label="Search conditions" style="max-width:400px;">
+          </form>
+          <div id="cond-count" class="muted" aria-live="polite"></div>
+        </div>
+        <div id="conditions-grid" class="grid-3">
+          <div class="tile" data-keywords="acne pimples zits blackheads whiteheads comedones pustules cysts scars">
+            <h3>Acne vulgaris</h3><p>Common inflammatory skin condition with pimples, blackheads, and cysts.</p>
+          </div>
+          <div class="tile" data-keywords="actinic keratosis sun damage precancer rough scaly patch">
+            <h3>Actinic keratosis</h3><p>Rough, scaly patches from sun damage; often precancerous.</p>
+          </div>
+          <div class="tile" data-keywords="basal cell carcinoma bcc skin cancer pearly bump">
+            <h3>Basal cell carcinoma</h3><p>Most common skin cancer, often a pearly bump in sun-exposed areas.</p>
+          </div>
+          <div class="tile" data-keywords="squamous cell carcinoma scc skin cancer scaly red patch nodule">
+            <h3>Squamous cell carcinoma</h3><p>Skin cancer appearing as a scaly red patch or nodule, may ulcerate.</p>
+          </div>
+          <div class="tile" data-keywords="malignant melanoma skin cancer changing mole dark asymmetry">
+            <h3>Malignant melanoma</h3><p>Serious skin cancer, often a changing, dark, or irregular mole.</p>
+          </div>
+          <div class="tile" data-keywords="seborrheic keratosis stuck-on waxy benign growth">
+            <h3>Seborrheic keratosis</h3><p>Very common, benign “stuck-on” appearing waxy or rough growths.</p>
+          </div>
+          <div class="tile" data-keywords="psoriasis plaques silvery scale elbows knees scalp">
+            <h3>Psoriasis</h3><p>Chronic autoimmune disease with thick, red, scaly patches.</p>
+          </div>
+          <div class="tile" data-keywords="atopic dermatitis eczema itch rash dry skin allergy">
+            <h3>Atopic dermatitis (eczema)</h3><p>Chronic, itchy, inflamed skin, often with allergies or asthma.</p>
+          </div>
+          <div class="tile" data-keywords="contact dermatitis rash allergic irritant red itchy blisters">
+            <h3>Contact dermatitis</h3><p>Red, itchy rash from contact with allergens or irritants.</p>
+          </div>
+          <div class="tile" data-keywords="seborrheic dermatitis dandruff flaky scalp eyebrows nose ears">
+            <h3>Seborrheic dermatitis</h3><p>Flaky, red, itchy skin on scalp, face, and ears (dandruff).</p>
+          </div>
+          <div class="tile" data-keywords="rosacea facial redness flushing bumps pustules blood vessels">
+            <h3>Rosacea</h3><p>Facial redness, flushing, visible blood vessels, and bumps.</p>
+          </div>
+          <div class="tile" data-keywords="urticaria hives welts swelling angioedema allergy">
+            <h3>Urticaria (hives)</h3><p>Itchy, raised welts or swelling from allergic or non-allergic triggers.</p>
+          </div>
+          <div class="tile" data-keywords="vitiligo depigmentation white patches autoimmune">
+            <h3>Vitiligo</h3><p>Loss of skin pigment, causing white patches.</p>
+          </div>
+          <div class="tile" data-keywords="alopecia areata hair loss patches autoimmune">
+            <h3>Alopecia areata</h3><p>Sudden patchy hair loss due to autoimmune attack on hair follicles.</p>
+          </div>
+          <div class="tile" data-keywords="androgenetic alopecia pattern hair loss male female thinning">
+            <h3>Androgenetic alopecia (male/female pattern hair loss)</h3><p>Genetic hair loss pattern in men and women.</p>
+          </div>
+          <div class="tile" data-keywords="nail disorders onychomycosis dystrophy fungus thick yellow brittle">
+            <h3>Nail disorders (onychomycosis, dystrophy)</h3><p>Fungal or structural nail changes: thick, yellow, brittle, or split nails.</p>
+          </div>
+          <div class="tile" data-keywords="bacterial skin infections impetigo cellulitis folliculitis redness pain pus">
+            <h3>Bacterial skin infections (impetigo, cellulitis, folliculitis)</h3><p>Red, painful, or pus-filled skin infections caused by bacteria.</p>
+          </div>
+          <div class="tile" data-keywords="viral skin infections warts molluscum herpes simplex zoster cold sore shingles">
+            <h3>Viral skin infections (warts, molluscum, herpes simplex, herpes zoster)</h3><p>Viral infections causing warts, cold sores, or shingles.</p>
+          </div>
+          <div class="tile" data-keywords="fungal skin infections tinea ringworm athlete's foot candidiasis scalp">
+            <h3>Fungal skin infections (tinea pedis, tinea corporis, tinea capitis, candidiasis)</h3><p>Fungal infections of skin, scalp, or nails (ringworm, athlete’s foot, yeast).</p>
+          </div>
+          <div class="tile" data-keywords="benign nevi moles brown flat raised uniform symmetric">
+            <h3>Benign nevi (moles)</h3><p>Noncancerous, uniform moles or birthmarks.</p>
+          </div>
+          <div class="tile" data-keywords="dysplastic nevi atypical moles irregular border color risk">
+            <h3>Dysplastic nevi (atypical moles)</h3><p>Unusual moles with irregular borders or color, higher melanoma risk.</p>
+          </div>
+          <div class="tile" data-keywords="lipomas epidermal inclusion cysts fatty lump nodule benign">
+            <h3>Lipomas and epidermal inclusion cysts</h3><p>Benign fatty lumps or cysts under the skin.</p>
+          </div>
+          <div class="tile" data-keywords="scabies mites intense itch burrows contagious">
+            <h3>Scabies</h3><p>Intensely itchy, contagious skin infestation by mites.</p>
+          </div>
+          <div class="tile" data-keywords="lichen planus purple bumps itchy wrists ankles mouth autoimmune">
+            <h3>Lichen planus</h3><p>Itchy, purplish bumps on skin or mouth, autoimmune origin.</p>
+          </div>
+          <div class="tile" data-keywords="lichen sclerosus white patches genital itch pain scarring">
+            <h3>Lichen sclerosus</h3><p>Thin, white, itchy patches, often in genital area, can scar.</p>
+          </div>
+          <div class="tile" data-keywords="bullous pemphigoid blistering autoimmune elderly tense blisters">
+            <h3>Bullous pemphigoid and other autoimmune blistering diseases</h3><p>Chronic autoimmune diseases causing large, tense blisters.</p>
+          </div>
+          <div class="tile" data-keywords="cutaneous lupus erythematosus discoid scaly plaques sun scarring">
+            <h3>Cutaneous lupus erythematosus</h3><p>Autoimmune skin condition with red, scaly, disc-shaped patches.</p>
+          </div>
+          <div class="tile" data-keywords="photodermatoses sun allergy rash hives polymorphic light eruption solar urticaria">
+            <h3>Photodermatoses (polymorphic light eruption, solar urticaria)</h3><p>Skin reactions to sunlight, causing rash or hives.</p>
+          </div>
+          <div class="tile" data-keywords="hyperpigmentation melasma dark spots post-inflammatory discoloration">
+            <h3>Hyperpigmentation disorders (melasma, post-inflammatory hyperpigmentation)</h3><p>Dark patches from excess melanin, sun, or inflammation.</p>
+          </div>
+          <div class="tile" data-keywords="hypopigmentation pityriasis alba light spots post-inflammatory hypo">
+            <h3>Hypopigmentation disorders (pityriasis alba, post-inflammatory hypopigmentation)</h3><p>Lighter skin patches from decreased melanin, often after eczema or injury.</p>
+          </div>
+        </div>
+        <script>
+        function filterConditions() {
+          const input = document.getElementById('cond-search').value.trim().toLowerCase();
+          const tiles = document.querySelectorAll('#conditions-grid .tile');
+          let visible = 0;
+          tiles.forEach(tile => {
+            const text = tile.innerText.toLowerCase();
+            const keys = tile.dataset.keywords || '';
+            if (!input || text.includes(input) || keys.includes(input)) {
+              tile.style.display = '';
+              visible++;
+            } else {
+              tile.style.display = 'none';
+            }
+          });
+          document.getElementById('cond-count').textContent = visible + (visible === 1 ? ' result found' : ' results found');
+        }
+        document.getElementById('cond-search').addEventListener('input', filterConditions);
+        window.addEventListener('DOMContentLoaded', filterConditions);
+        </script>
+  </main>
+  <footer class="cd-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo">CD</div>
+        <p>Modern medical, surgical, and cosmetic dermatology with a patient-first approach.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="conditions.html">Conditions</a></li>
+          <li><a href="dr-carter.html">Dr. Carter</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><strong>Address:</strong> 702 NW Sheridan Rd, Lawton, OK 73505</li>
+          <li><strong>Phone:</strong> <a href="tel:+15805763376">(580) 576-DERM (3376)</a></li>
+          <li><strong>Fax:</strong> (580) 576-3375</li>
+          <li><strong>Email:</strong> <a href="mailto:CarterDermatology@gmail.com">CarterDermatology@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon–Thu: 8:30am – 5:00pm</li>
+          <li>Fri: 8:30am – 1:00pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© 2025 Carter Dermatology. All rights reserved.</small>
+      <div class="legal-links">
+        <a href="#">Privacy</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
